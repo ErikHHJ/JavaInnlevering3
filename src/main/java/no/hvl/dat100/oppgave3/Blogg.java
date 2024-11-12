@@ -64,8 +64,16 @@ public class Blogg {
 	}
 
 	
+	@Override
 	public String toString() {
-		throw new UnsupportedOperationException(TODO.method());
+	    StringBuilder str = new StringBuilder();
+	    str.append(nesteledig).append("\n"); 
+
+	    for (int i = 0; i < nesteledig; i++) {
+	        str.append(innleggtabell[i].toString()); 
+	    }
+
+	    return str.toString();
 	}
 
 	// valgfrie oppgaver nedenfor
